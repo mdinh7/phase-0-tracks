@@ -1,3 +1,33 @@
-body {
-	background-color: blue
+body{
+  max-width:960px;
+  font-family: Courier;
+}
+
+.column-1{
+  float:left;
+  width: 45%;
+  padding-left:40px;
+  margin-top:20px;
+  background-color:#dddddd;
+  
+}
+
+.column-2{
+  float:right;
+  width:45%;
+  padding-right:40px;
+  margin-top:20px;
+  background-color:#dddddd;
+ 
+}
+
+header h1 {
+  background-color: #6091e0;
+}
+footer {
+  margin-top:10px;
+  background-color: #6091e0;
+  float:left;
+  clear:both;
+  width:100%;
 }
