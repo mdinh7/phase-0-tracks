@@ -21,11 +21,10 @@ def encrypt
 	index = 0
 	alphabet = "abcdefghijklmnopqrstuvwxyz".reverse!
 	while index < input.length
-		input.index(input)== alphabet.index("abcdefghijklmnopqrstuvwxyz")
 		if input[index] == "z"
 			p alphabet[25]
 		else
-			p [index].next
+			p input[index].next
 		end
 		index += 1
 	end
@@ -37,15 +36,18 @@ def decrypt
 	puts "What is your encrypted password?"
 	input = gets.chomp
 	index = 0
-	alphabet = "zyxwvutsrqponmlkjihgfedcba".reverse!
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	while index < input.length
-		input.index(input) == alphabet.index(alphabet)
-		p input[index].next
+		letter = input[index]
+		number = alphabet.index(letter)
+		p alphabet[number - 1]
 		index += 1
 	end
 end
 
+
 decrypt(encrypt("swordfish"))
+
 
 puts "Would you like to decrypt or encrypt?"
 answer = gets.chomp
