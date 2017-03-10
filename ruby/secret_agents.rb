@@ -15,44 +15,48 @@ Change each letter to next one
 
 =end
 
-def encrypt
-	puts "What is your password?"
-	input = gets.chomp
+
+def encrypt(pass)
 	index = 0
-	alphabet = "abcdefghijklmnopqrstuvwxyz".reverse!
-	while index < input.length
-		input.index(input)== alphabet.index("abcdefghijklmnopqrstuvwxyz")
-		if input[index] == "z"
-			p alphabet[25]
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	while index < pass.length
+		letter = pass[index]
+		number = alphabet.index(letter)
+		if pass[index] == "z"
+			p "a"
 		else
-			p [index].next
+			p alphabet[number + 1]
 		end
 		index += 1
 	end
 end
 
-
-
-def decrypt
-	puts "What is your encrypted password?"
-	input = gets.chomp
+def decrypt(pass)
 	index = 0
-	alphabet = "zyxwvutsrqponmlkjihgfedcba".reverse!
-	while index < input.length
-		input.index(input) == alphabet.index(alphabet)
-		p input[index].next
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	while index < pass.length
+		letter = pass[index]
+		number = alphabet.index(letter)
+		p alphabet[number - 1]
 		index += 1
 	end
 end
 
-decrypt(encrypt("swordfish"))
+# decrypt(encrypt("swordfish"))
+# returns error: undefined method 'length' for nil:NilClass (noMethodError)
+# essentially can't read the encrypted swordfish in the same line, and decrypt it.
+
 
 puts "Would you like to decrypt or encrypt?"
 answer = gets.chomp
 if answer == "decrypt"
-	decrypt
+	puts "What is your encrypted password?"
+	input = gets.chomp
+	decrypt(input)
 elsif answer == "encrypt"
-	encrypt
+	puts "What is your password?"
+	input = gets.chomp
+	encrypt(input)
 end
 
 
