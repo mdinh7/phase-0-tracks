@@ -1,0 +1,29 @@
+Release 0:
+
+- Look at buttons with arrows denoting direction (Up or Down).
+- Press a button.
+	- Down arrow to go down.
+	- Up arrow to go up.
+- Wait for elevator doors to completely open.
+- Step inside elevator.
+- Figure out which floor is the destination.
+- Press a button.
+	- Button will have a number corresponding to floor number.
+- Wait while elevator goes up.
+- Watch floor display
+	- Do not step out until it reaches the desired floor
+- Once floor display reaches desired, wait for doors to open.
+- Step out of the elevator.
+
+Release 1:
+
+How to make instant ramen (from package):
+
+- Remove plastic wrapping/packaging
+- Take out a small pot
+- Add water until 2/3rd full
+- Add soup mix
+- Wait until water boils
+- Place noodles into water
+- Wait around 3-4 minutes until done.
+- If softer noodles are wanted, leave for an additional 30 seconds to a minute.
