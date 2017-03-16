@@ -69,30 +69,40 @@ letters = {
 	10 => "J"
 }
 
-def number_delete()
-	numbers = [ 1, 2, 3, 4, 5, 6, 7, 8 ,9, 10 ]
-	numbers.length >= 4
-		numbers.slice!(4..10)
-		p numbers
-end
+# A method that iterates through the items, deleting any that meet a certain condition
+   def number_delete
+   value = yield
+   value.slice!(1..5)
+   puts "value is: #{value}"
+     
+ end
 
-number_delete
-
-def hash_delete
-	letters = {
-	1 => "A",
-	2 => "B",
-	3 => "C",
-	4 => "D",
-	5 => "E",
-	6 => "F",
-	7 => "G",
-	8 => "H",
-	9 => "I",
-	10 => "J"
-}
+ number_delete do
+   numbers = [ 1, 2, 3, 4, 5, 6, 7, 8 ,9, 10 ]
+ end
 
 
+# A method that iterates through the items, deleting any that meet a certain condition
+   numbers = [ 1, 2, 3, 4, 5, 6, 7, 8 ,9, 10 ]
+   numbers.delete_if{|n| n <= 5 }
+   p numbers
+
+# A different method that filters a data structure for only items satisfying a certain condition
+      def number_delete1
+   value = yield
+   value
+     end
+
+ number_delete1 do
+   numbers = [ 1, 2, 3, 4, 5, 6, 7, 8 ,9, 10 ]
+   numbers.each { |value| puts value if value.to_f%2==0}
+ end
+
+
+# A method that will remove items from a data structure until the condition in the block evaluates to false,
+    letters = {1 => "A",2 => "B",3 => "C",4 => "D",5 => "E",}
+    letters.delete_if {|key, value| value != "D" }  
+    p letters
 
 
 
