@@ -4,7 +4,7 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+# "iNvEsTiGaTiOn".<swapcase>
 # => “InVeStIgAtIoN”
 
 # "zom".<???>
@@ -13,7 +13,7 @@
 # "enhance".<???>
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+# "Stop! You’re under arrest!".<upcase>
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
@@ -37,3 +37,15 @@
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
+
+p "iNvEsTiGaTiOn".swapcase
+p "zom".chomp("o")
+p "enhance".center(20)
+p "Stop! You’re under arrest!".upcase
+p "the usual".insert(9, ' suspects')
+p " suspects".insert(0, 'the usual')
+p "The case of the disappearing last letter".chop
+p "The mystery of the missing first letter".tr('T','')
+p "Elementary,    my   dear        Watson!".center(10)
+p "z".ord
+p "How many times does the letter 'a' appear in this string?".count"a"
