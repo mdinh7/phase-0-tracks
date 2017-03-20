@@ -29,6 +29,7 @@ loop do
     end
    end
    p name_alias.join(" ")
+   # p real_names "is"  name_alias
   end 
 end
 
