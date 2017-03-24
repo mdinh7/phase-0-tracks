@@ -21,3 +21,6 @@ end
 santa = Santa.new
 puts santa.speak
 puts santa.eat_milk_and_cookies("Chocolate Chip")
+
+
+santas = []
