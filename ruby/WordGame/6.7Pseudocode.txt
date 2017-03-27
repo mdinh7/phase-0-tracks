@@ -1,0 +1,15 @@
+Create class for game
+Create attribute for word in initialize
+Create attribute for guesses in initialize
+Create attribute for letters in initialize
+Add attr_accessor for all attributes so they may be read and written to later.
+Create method in the class to check the word for specific letter.
+	Make sure to split the word into a letter array in order to check.
+If the letter is found, will print the letter, if it is not found will print the blank space
+For the driver code, welcome the user to the game, and initialize a new instance.
+Ask player one for a word, this word will be stored in the attribute we initialized earlier.
+Create a loop, in which the user is asked for a letter, and  the letter is checked against the letters array using the class method.
+The number of possible guesses will be equal to be equal to the length of the word.
+After each guess increase guess amount by 1 
+If after word.length guesses, player 2 has not guessed it print a taunting message.
+If before or equal to world.length guess, player 2 figures out the word, print "Congratulations."
