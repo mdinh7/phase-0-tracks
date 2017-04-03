@@ -35,3 +35,12 @@ function match(obj1, obj2){
 
 console.log(match(a,b))
 
+var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+function random(n)
+for (var i = 0; i < n; i++)
+	math.random(0..10) = string.length
+	string = alphabet.shuffle
+	console.log(string)
+
+
+console.log(random(10))
