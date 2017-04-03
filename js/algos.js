@@ -17,3 +17,21 @@ function longest(array) {
 var names = ["Tom", "Jimmy", "Tomathy", "Rin"];
 
 console.log(longest(names))
+
+// takes input of 2 objects
+// compares objects
+// if they share a value, return true
+
+var a = {name: "Steven", age: 54}
+var b = {name: "Tamir", age: 54}
+
+function match(obj1, obj2){
+    if (choice1 = choice2) 
+    	{ return true; }
+    else 
+    	{return false}
+
+}
+
+console.log(match(a,b))
+
