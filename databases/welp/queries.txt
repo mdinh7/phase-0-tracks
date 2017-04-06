@@ -1,0 +1,51 @@
+
+Query to display 3 joined tables:
+
+SELECT
+    businesses.name,
+    reviews.stars,
+    users."first name",
+    users."last name",
+    reviews.comment
+FROM
+    reviews
+JOIN businesses  
+ON
+    businesses.id = reviews.business_id
+JOIN users  
+ON
+    users.id = reviews.user_id
+;
+
+Output:
+
+Lotus Yoga|5|Bradford|Pitt|Great instructors!
+JoeBob's Sportz Barn|4|Angela|Jolie|Solid equipment, fair prices.
+Lotus Yoga|1|Steven|Wonder|I can't see anything
+Amir's Towing|3|Mandy|Kaling|Got my car back for a fair price.
+Sushi World|4|Bradford|Pitt|Quality fish and great menu.
+
+Query to display information for one business:
+
+SELECT
+    businesses.name,
+    reviews.stars,
+    users."first name",
+    users."last name",
+    reviews.comment
+FROM
+    reviews
+JOIN businesses  
+ON
+    businesses.id = reviews.business_id
+JOIN users  
+ON
+    users.id = reviews.user_id
+WHERE businesses.name = "Lotus Yoga"
+;
+
+Output:
+
+Lotus Yoga|5|Bradford|Pitt|Great instructors!
+Lotus Yoga|1|Steven|Wonder|I can't see anything
+
