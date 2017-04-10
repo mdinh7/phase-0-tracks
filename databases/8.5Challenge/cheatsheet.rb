@@ -18,7 +18,8 @@ def add_cheat(db, language, site)
 end
 
 def retrieve_cheat(db,language)
-  p db.execute("SELECT ? FROM language"), [language]
+  result = db.execute("SELECT site FROM language WHERE language = '#{language}' ")
+  puts "The site is: #{result}"
 end
 
 loop do
