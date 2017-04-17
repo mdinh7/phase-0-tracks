@@ -1,5 +1,6 @@
 # require gems
-require 'sinatra'
+require "sinatra"
+require "sinatra/reloader" if development?
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -12,6 +13,26 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+# contact route
+
+get '/contact' do
+  "P. Sherman, 42 Wallaby Way, Sydney"
+end
+
+#great job route
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job #{params[:name]}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/addition' do
+  p params[:num1].to_i + params[:num2].to_i
+end
 # write a GET route with
 # route parameters
 get '/about/:person' do
