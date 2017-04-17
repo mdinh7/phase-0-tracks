@@ -24,4 +24,24 @@ post '/students' do
   redirect '/'
 end
 
-# add static resources
+# add a static resource
+get '/students/search' do
+  erb :search
+end
+
+get '/students' do 
+  db.execute("SELECT FROM students WHERE name=#{params[:name]}")
+  redirect '/'
+end
+
+
+
+# add another static resource
+get '/students/update' do
+  erb :update_student
+end
+
+# patch '/students/' do 
+#   db.execute("UPDATE students SET age=(?) WHERE name=(?)", [params["age"]], [params["name"]])
+#   redirect '/'
+# end
